@@ -1,3 +1,32 @@
-<h1>
-  Hello World.
-</h1>
+<div class="row">
+<div class="launch_year">
+  <h1>SpaceX Launch Program</h1>
+<div class="filters">
+  <h3>Filters</h3>
+  <p>Launch year</p>
+  <div class="years_filter">
+  <div *ngFor="let year of years" class="filter_groups">
+    <button mat-raised-button class="year_button" >{{year}}</button>
+    </div>
+
+  </div>
+  </div>
+  <div class="filters">
+    <p>Successful Launch</p>
+    <div >
+      <button mat-raised-button class="filter_group2">True</button>
+      <button mat-raised-button  class="filter_group2">True</button>
+    </div>
+  </div>
+  <div class="filters">
+    <p>Successful Landing</p>
+    <div >
+      <button mat-raised-button  class="filter_group2">True</button>
+      <button mat-raised-button  class="filter_group2">True</button>
+    </div>
+  </div>
+</div>
+<div class="planet_details">
+  <h1>Hellop....planets</h1>
+</div>
+</div>
