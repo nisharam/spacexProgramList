@@ -5,15 +5,17 @@
 .launch_year{
     border: 1px solid black;
     flex: 25%;
+    background-color: white;
+    margin: 17px;
 }
 .planet_details{
     border: 1px solid red;
     flex: 75%;
+    margin: 17px;
 }
 .filters{
-    background-color: white;
-    margin: 10px;
-    padding: 20px;
+    /* margin: 10px; */
+padding: 20px;
 }
 .filters > p {
     border-bottom: 1px solid gray;
@@ -23,6 +25,7 @@
     display:flex;
     flex-wrap: wrap;
     flex: 50%;
+    padding-left:13px;
 }
 .filter_groups{
     margin: 10px;
@@ -34,6 +37,19 @@
 }
 .year_button{
     background-color: #6eb882;
+}
+.planet_cards{
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.mat-card>:first-child, .mat-card-content>:first-child{
+    height: 179px;
+    width: 212px;
+}
+.planet_img{
+    background-color: #e2e1d6;
+    padding: 10px
 }
 @media screen and (max-width: 600px) {
     .row {

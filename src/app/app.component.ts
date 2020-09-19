@@ -18,9 +18,9 @@ years = [];
     this.planetService.getAllPlanetData().subscribe(data => {
       this.planetData = data;
       this.planetData.map(planet => {
+        console.log('planent data is', planet)
         this.years = [...new Set(this.planetData.map(year => year.launch_year))]
       })
-
 
     });
 
