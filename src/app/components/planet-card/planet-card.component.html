@@ -1,0 +1,16 @@
+<div class="planet_cards">
+    <div *ngFor="let planet of planetCardData" class="planet_cards">
+      <mat-card>
+        <img src={{planet.links.mission_patch_small}} class="planet_img" />
+        <mat-card-content>
+          <div>
+          <h5>{{planet.mission_name}}</h5>
+          <h5>Launch Year: <p> {{planet.launch_year}}</p></h5>
+          <h5 *ngFor="let id of planet.mission_id">
+            <h5>Mission Ids: {{id}}</h5>
+          </h5>
+        </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>

@@ -1,0 +1,14 @@
+
+.planet_cards{
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.mat-card>:first-child, .mat-card-content>:first-child{
+    height: 179px;
+    width: 212px;
+}
+.planet_img{
+    background-color: #e2e1d6;
+    padding: 10px
+}

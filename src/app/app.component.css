@@ -7,6 +7,7 @@
     flex: 25%;
     background-color: white;
     margin: 17px;
+    height: 90em;
 }
 .planet_details{
     border: 1px solid red;
@@ -38,19 +39,22 @@ padding: 20px;
 .year_button{
     background-color: #6eb882;
 }
-.planet_cards{
-    margin: 5px;
-    display: flex;
-    flex-wrap: wrap;
+.year_button:hover{
+    background-color: #59bf34;
 }
-.mat-card>:first-child, .mat-card-content>:first-child{
-    height: 179px;
-    width: 212px;
+.filter_group2:hover{
+    background-color:#59bf34;
 }
-.planet_img{
-    background-color: #e2e1d6;
-    padding: 10px
-}
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 600px) {
     .row {
       flex-direction: column;

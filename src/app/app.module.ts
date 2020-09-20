@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule} from './material/material/material.module';
+import { PlanetCardComponent } from './components/planet-card/planet-card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PlanetCardComponent
   ],
   imports: [
     BrowserModule,
