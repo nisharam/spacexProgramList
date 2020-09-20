@@ -15,21 +15,20 @@ apiValues = [ true, false];
 launchFilterSelected:boolean;
 yearFilterSelected:number;
 landFilterSelected:number;
+clicked= false;
 
   ngOnInit(){
     this.planetService.getAllPlanetData().subscribe(data => {
       this.planetData = data;
       this.years = [...new Set(this.planetData.map(year => year.launch_year))]
 
-      this.planetData.map(planet => {
-        // console.log('planet data is', planet);
-      })
 
     });
 
   }
 
   getplanetData(year:any){
+    this.clicked = !this.clicked;
     this.planetService.getYearWiseData(year).subscribe(data => {
       this.yearFilterSelected = year;
       this.planetData = data;

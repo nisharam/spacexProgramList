@@ -12,3 +12,21 @@
     background-color: #e2e1d6;
     padding: 10px
 }
+.card_content{
+    display:flex;
+    flex-direction: column;
+    line-height: 7%;
+}
+.card_content >h3{
+    color:blue;
+}
+.mission_data{
+    display: flex;
+    align-items: baseline;
+}
+.mission_data p {
+    color: blue;
+}
+.mission_id ul li{
+    color: blue;
+}

@@ -3,23 +3,22 @@
     flex: wrap;
 }
 .launch_year{
-    border: 1px solid black;
     flex: 25%;
     background-color: white;
     margin: 17px;
-    height: 90em;
+    height: 55em;
 }
 .planet_details{
-    border: 1px solid red;
     flex: 75%;
     margin: 17px;
 }
 .filters{
-    /* margin: 10px; */
-padding: 20px;
+padding-left: 18px;
+}
+.filter_border{
+    margin: -7px 30px;
 }
 .filters > p {
-    border-bottom: 1px solid gray;
     text-align:center;
 }
 .years_filter{
@@ -34,16 +33,19 @@ padding: 20px;
 }
 .filter_group2{
     margin: 0 22px;
-    background-color:#6eb882;
+    background-color:#b4d6ab;
 }
 .year_button{
-    background-color: #6eb882;
+    background-color: #b4d6ab;
 }
 .year_button:hover{
     background-color: #59bf34;
 }
 .filter_group2:hover{
     background-color:#59bf34;
+}
+.test{
+    background-color: #59bf34;
 }
 
 

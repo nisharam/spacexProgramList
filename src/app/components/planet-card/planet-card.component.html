@@ -3,12 +3,29 @@
       <mat-card>
         <img src={{planet.links.mission_patch_small}} class="planet_img" />
         <mat-card-content>
-          <div>
-          <h5>{{planet.mission_name}}</h5>
-          <h5>Launch Year: <p> {{planet.launch_year}}</p></h5>
-          <h5 *ngFor="let id of planet.mission_id">
-            <h5>Mission Ids: {{id}}</h5>
-          </h5>
+          <div class="card_content">
+          <h3>{{planet.mission_name}}</h3>
+          <div *ngIf="planet.mission_id" class="mission_id">
+            <h4>Mission Ids:- </h4>
+            <ul *ngFor="let id of planet.mission_id">
+              <li>{{id}}</li>
+            </ul>
+          </div>
+          <div class="mission_data">
+          <h4>Launch Year: </h4>
+          <p>{{planet.launch_year}}</p>
+          </div>
+          <div class="mission_data">
+            <h4>Successful Launch : </h4>
+            <p>{{planet.launch_success}}</p>
+            </div>
+            <div class="mission_data">
+              <h4>Successful Landing : </h4>
+              <div *ngFor="let data of planet.rocket.first_stage.cores">
+              <p>{{data.land_success}}</p>
+              </div>
+              </div>
+       
         </div>
         </mat-card-content>
       </mat-card>
