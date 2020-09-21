@@ -44,10 +44,14 @@ padding-left: 18px;
 .filter_group2:hover{
     background-color:#59bf34;
 }
-.test{
-    background-color: #59bf34;
-}
+.active{
+    background: #59bf34;
+  }
 
+
+  .active2{
+    background: #59bf34;
+  }
 
 
 

@@ -16,7 +16,9 @@ apiValues = [ true, false];
 launchFilterSelected: boolean;
 yearFilterSelected: number;
 landFilterSelected: number;
-
+selectedButton;
+selectedButton1;
+selectedButton2;
 ngOnInit(): void{
     this.planetService.getAllPlanetData().subscribe(data => {
       this.planetData = data;
@@ -27,25 +29,28 @@ ngOnInit(): void{
   }
 
   getplanetData(year: any): void{
+    this.selectedButton = year;
     this.planetService.getYearWiseData(year).subscribe(data => {
       this.yearFilterSelected = year;
       this.planetData = data;
    });
   }
   getLaunchedPlanetData(launchVal): void{
+    this.selectedButton1 = launchVal;
     this.launchFilterSelected = launchVal;
     this.planetService.getLaunchSuccessWiseData(launchVal).subscribe(data => {
       this.planetData = data;
     });
   }
   getLandPlanetData(landVal): void {
+    this.selectedButton2 = landVal;
     this.landFilterSelected = landVal;
     this.planetService.getLaunchAndLandWiseData(landVal, this.launchFilterSelected).subscribe(data => {
       this.planetData = data;
     });
   }
-  getAllFilteredData(): void {
-    this.planetService.getAllFilteredData(this.launchFilterSelected, this.landFilterSelected, this.yearFilterSelected).subscribe(data => {
+  getAllFilteredData(year): void {
+    this.planetService.getAllFilteredData(this.launchFilterSelected, this.landFilterSelected, year).subscribe(data => {
       this.planetData = data;
     });
   }

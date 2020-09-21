@@ -7,7 +7,7 @@
   <hr class="filter_border" />
   <div class="years_filter"> 
   <div *ngFor="let year of years" class="filter_groups">
-    <button mat-raised-button class="year_button"   (click)="getplanetData(year)">{{year}}</button>
+    <button mat-raised-button class="year_button" [ngClass]="selectedButton==year ? 'active' : 'year_button'"  (click)="getplanetData(year)">{{year}}</button>
     </div>
 
   </div>
@@ -17,7 +17,7 @@
     <hr class="filter_border" />
     <div class="years_filter">
       <div *ngFor="let val of apiValues" class="filter_groups">
-        <button mat-raised-button class="year_button" (click)="getLaunchedPlanetData(val)">{{val}}</button>
+        <button mat-raised-button class="year_button" [ngClass]="selectedButton1==val ? 'active' : 'year_button'" (click)="getLaunchedPlanetData(val)">{{val}}</button>
         </div>
     
       </div>
@@ -26,8 +26,8 @@
     <p>Successful Landing</p>
     <hr class="filter_border" />
     <div class="years_filter">
-      <div *ngFor="let val of apiValues" class="filter_groups">
-        <button mat-raised-button class="year_button" (click)="getLandPlanetData(val)">{{val}}</button>
+      <div *ngFor="let landval of apiValues" class="filter_groups">
+        <button mat-raised-button class="year_button" [ngClass]="selectedButton2==landval ? 'active' : 'year_button'" (click)="getLandPlanetData(landval)">{{landval}}</button>
         </div>
     
       </div>
