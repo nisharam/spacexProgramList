@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-planet-card',
@@ -12,7 +12,4 @@ export class PlanetCardComponent implements OnInit{
 
   ngOnInit(): void {
   }
-  // ngOnChanges(data){
-  //   }
-
 }

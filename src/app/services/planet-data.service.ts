@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-import { planetProfile} from '../model/PlanetProfile';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,21 +9,20 @@ export class PlanetDataService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getAllPlanetData(){
-    return this.httpClient.get('https://api.spaceXdata.com/v3/launches?limit=100')
+  getAllPlanetData(): Observable<any> {
+    return this.httpClient.get('https://api.spaceXdata.com/v3/launches?limit=100');
   }
-  getYearWiseData(year) {
-    return this.httpClient.get(`https://api.spaceXdata.com/v3/launches?limit=100&launch_year=${year}`)
-  
+  getYearWiseData(year): Observable<any> {
+    return this.httpClient.get(`https://api.spaceXdata.com/v3/launches?limit=100&launch_year=${year}`);
   }
-  getLaunchSuccessWiseData(val) {
-    return this.httpClient.get(`https://api.spaceXdata.com/v3/launches?limit=100&launch_success=${val}`)
+  getLaunchSuccessWiseData(val): Observable<any> {
+    return this.httpClient.get(`https://api.spaceXdata.com/v3/launches?limit=100&launch_success=${val}`);
   }
-  getLaunchAndLandWiseData(launchVal, landVal){
-    return this.httpClient.get(`https://api.spacexdata.com/v3/launches?limit=100&launch_success=${launchVal}&land_success=${landVal}`)
+  getLaunchAndLandWiseData(launchVal, landVal): Observable<any>{
+    return this.httpClient.get(`https://api.spacexdata.com/v3/launches?limit=100&launch_success=${launchVal}&land_success=${landVal}`);
   }
-  getAllFilteredData(launchVal, landVal,yearVal) {
-    return this.httpClient.get(`https://api.spacexdata.com/v3/launches?limit=100&launch_success=${launchVal}&land_success=${landVal}&launch_year=${yearVal}`)
+  getAllFilteredData(launchVal, landVal, yearVal): Observable<any> {
+    return this.httpClient.get(`https://api.spacexdata.com/v3/launches?limit=100&launch_success=${launchVal}&land_success=${landVal}&launch_year=${yearVal}`);
   }
 
 }

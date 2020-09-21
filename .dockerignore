@@ -1,0 +1,5 @@
+.git
+.firebase
+/e2e
+/node_modules
+.gitignore
