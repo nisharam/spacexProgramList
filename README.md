@@ -11,6 +11,11 @@ For showing the two columns in the desktop and mobile view, I have used the foll
 and flex-wrap to wrap them in the container.
 By using this we can have 3 cards on desktop view and 2 cards on tablet . It sets accrording to the screen size.
 
+### The following checks has been done in the project:-
+Not set up the CI/CD for the project but checked these criteria:-
+* lint
+* test:- wrote few unit test cases and passed.
+
 
 ### Following is the step to set up the project.
 * Run ```npm i``` :- It will install all the required dependencies.
