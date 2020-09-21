@@ -37,5 +37,6 @@ http://localhost:8080/
 Now,we can see the webapp running in the browser.
 
 ### hosted url:-
+I have deployed the app using firebase and below is the url of the hosted app.
 The webapp is hosted and  checked on :- https://spacexprogram-9ea25.web.app
 
