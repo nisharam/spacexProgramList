@@ -43,10 +43,15 @@ ngOnInit(): void{
     });
   }
   getLandPlanetData(landVal): void {
+    console.log('i am getting called');
     this.selectedButton2 = landVal;
     this.landFilterSelected = landVal;
-    this.planetService.getLaunchAndLandWiseData(landVal, this.launchFilterSelected).subscribe(data => {
+    console.log('land value ', landVal);
+    console.log('launch value', this.launchFilterSelected);
+    this.planetService.getLaunchAndLandWiseData(this.launchFilterSelected, landVal).subscribe(data => {
+
       this.planetData = data;
+      console.log('the data i am getting is', data);
     });
   }
   getAllFilteredData(year): void {

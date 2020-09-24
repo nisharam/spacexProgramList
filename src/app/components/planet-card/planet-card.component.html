@@ -1,5 +1,5 @@
 <div class="planet_cards">
-    <div *ngFor="let planet of planetCardData" class="planet_cards">
+    <div *ngFor="let planet of planetCardData" class="planet_cards_details"> 
       <mat-card>
         <img src={{planet.links.mission_patch_small}} class="planet_img" />
         <mat-card-content>
@@ -30,4 +30,7 @@
         </mat-card-content>
       </mat-card>
     </div>
+    <!-- <div *ngIf="planetCardData.length > 0">
+      <h4>No data available</h4>
+      </div> -->
   </div>

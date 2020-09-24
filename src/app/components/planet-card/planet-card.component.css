@@ -4,13 +4,20 @@
     display: flex;
     flex-wrap: wrap;
 }
+.planet_cards_details{
+    width: 23%;
+    height: auto;
+    margin:5px;
+ 
+}
 .mat-card>:first-child, .mat-card-content>:first-child{
     height: 179px;
-    width: 212px;
+    width: 162px;
 }
 .planet_img{
     background-color: #e2e1d6;
-    padding: 10px
+    padding: 0 10px;
+    /* margin-left: 14px; */
 }
 .card_content{
     display:flex;
@@ -19,6 +26,7 @@
 }
 .card_content >h3{
     color:blue;
+    width: max-content;
 }
 .mission_data{
     display: flex;
@@ -30,3 +38,17 @@
 .mission_id ul li{
     color: blue;
 }
+.mat-card-content{
+    padding-bottom: 13px;
+}
+@media screen and (max-width: 600px) {
+    .planet_cards {
+      flex-direction: column;
+    }
+    .planet_cards_details{
+        width: 90%;
+        height: auto;
+        margin:5px;
+     
+    }
+  }

@@ -19,7 +19,7 @@ export class PlanetDataService {
     return this.httpClient.get(`https://api.spaceXdata.com/v3/launches?limit=100&launch_success=${val}`);
   }
   getLaunchAndLandWiseData(launchVal, landVal): Observable<any>{
-    return this.httpClient.get(`https://api.spacexdata.com/v3/launches?limit=100&launch_success=${launchVal}&land_success=${landVal}`);
+    return this.httpClient.get(`https://api.spacexdata.com/v3/launches?limit=100&amp;launch_success=${launchVal}&amp;land_success=${landVal}`);
   }
   getAllFilteredData(launchVal, landVal, yearVal): Observable<any> {
     return this.httpClient.get(`https://api.spacexdata.com/v3/launches?limit=100&launch_success=${launchVal}&land_success=${landVal}&launch_year=${yearVal}`);
